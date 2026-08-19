@@ -1,16 +1,15 @@
 #include "mech.h"
 #include "weapon.h"
 #include <string>
-using namespace std;
 
-//Default constructor: set the health to 100.
+// Default constructor: set the health to 100.
 Mech::Mech() {
     health = 100;
     frame = "Unkown Frame";
 }
 
-//Parameterized constructor: set the health to user input.
-Mech::Mech(int newHealth, string givenName){
+// Parameterized constructor: set the health to user input.
+Mech::Mech(int newHealth, std::string givenName){
     // validate user input. (No neg, or char).
     if (newHealth > 100) {
         health = newHealth;
@@ -28,7 +27,7 @@ int Mech::getHealth() {
     return health;
 }
 
-string Mech::getName() {
+std::string Mech::getName() {
     return frame;
 }
 
